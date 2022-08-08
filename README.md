@@ -1,1 +1,0 @@
-# udacity-image-filter-project
