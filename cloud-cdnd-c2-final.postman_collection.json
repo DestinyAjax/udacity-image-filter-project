@@ -1,12 +1,12 @@
 {
 	"info": {
 		"_postman_id": "4bcf1909-8996-44b7-be35-b130ab03d12f",
-		"name": "cloud-cdnd-c2-final",
+		"name": "udacity-image-filter-project",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "http://localhost:8082/filteredimage?image_url=https://timedotcom.files.wordpress.com/2019/03/kitten-report.jpg",
+			"name": "https://timedotcom.files.wordpress.com/2019/03/kitten-report.jpg",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -23,6 +23,30 @@
 						{
 							"key": "image_url",
 							"value": "https://timedotcom.files.wordpress.com/2019/03/kitten-report.jpg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{HOST}}/filteredimage?image_url=",
+					"protocol": "http",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"filteredimage"
+					],
+					"query": [
+						{
+							"key": "image_url",
+							"value": ""
 						}
 					]
 				}
@@ -56,7 +80,7 @@
 		{
 			"id": "1df3d31a-de30-494b-a3d0-f1228dd8713c",
 			"key": "HOST",
-			"value": "localhost:8082",
+			"value": "http://udacityimagefilter-env.eba-k26eg3kj.us-east-2.elasticbeanstalk.com",
 			"type": "string"
 		}
 	]
